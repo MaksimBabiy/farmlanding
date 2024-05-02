@@ -149,3 +149,61 @@ const swiper2 = new Swiper(".swiper2", {
     el: ".swiper-scrollbar",
   },
 });
+const swiper3 = new Swiper(".swiper3", {
+  direction: "horizontal",
+  loop: false,
+  autoplay: {
+    delay: 5000,
+  },
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+    modifierClass: "swiper-pagination-custom-",
+    renderProgressbar: function (progressbarFillClass) {
+      return '<span class="' + progressbarFillClass + '"></span>';
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 1,
+  trackVisibility: true,
+  delay: 100,
+};
+let items = document.querySelectorAll(".activity__right-item");
+let spans = document.querySelectorAll(".activity__line-span");
+const intersection = (target) => {
+  let callback = function (entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isVisible) {
+        spans.forEach((item) => {
+          item.classList.remove("active");
+          item.dataset.activity === entry.target.dataset.activity
+            ? item.classList.add("active")
+            : null;
+        });
+      }
+    });
+  };
+  var observer = new IntersectionObserver(callback, options);
+  observer.observe(target);
+};
+items.forEach((item) => {
+  intersection(item);
+});
