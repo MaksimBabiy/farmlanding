@@ -180,7 +180,7 @@ const swiper3 = new Swiper(".swiper3", {
   },
 });
 let options = {
-  root: null,
+  root: document.body,
   rootMargin: "0px",
   threshold: 1,
   trackVisibility: true,
