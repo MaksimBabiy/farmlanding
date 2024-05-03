@@ -5,6 +5,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnHumburger = document.querySelector(".header__humburger");
   const btnCloseMobile = document.querySelector(".head__menu-close");
   const mobileMenuInner = document.querySelector(".mobile__menu-inner");
+  const modalBtn = document.querySelector(".btn-header");
+  const modal = document.querySelector(".modal");
+  const overlay = document.querySelector("#overlay");
+  const modalClose = document.querySelector(".modalContent-close");
+  const faq_item = document.querySelectorAll(".faq_item");
+  for (let item of faq_item) {
+    item.addEventListener("click", function () {
+      item.children[0].children[1].classList.toggle("active");
+      item.children[1].classList.toggle("active");
+    });
+  }
+  modalBtn.addEventListener("click", function () {
+    modal.classList.add("active");
+    overlay.classList.add("active");
+  });
+  modalClose.addEventListener("click", function () {
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+  });
 
   if (btnHumburger && mobileMenu && btnCloseMobile) {
     btnHumburger.addEventListener("click", function () {

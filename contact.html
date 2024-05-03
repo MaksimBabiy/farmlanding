@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="breadway" />
+    <title>Breadway</title>
+    <meta http-equiv="Cache-Control" content="max-age=3153" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      type="image/png"
+      href="images/favicon/favicon-16x16.png"
+      rel="icon"
+      sizes="32x32" />
+    <link
+      type="image/png"
+      href="images/favicon/favicon-32x32.png"
+      rel="icon"
+      sizes="16x16" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <!-- prettier-ignore -->
+  <body>
+  <div id="overlay"></div>
+  <div class="modal">
+    <div class="modalContent">
+      <img src="images/icons/close.svg" alt="modal close button" class="modalContent-close" width="32px" height="32px">
+      <div class="modalContent-left">
+        <img src="images/banners/modal.png" alt="">
+      </div>
+      <form action="">
+        <h2>Заповніть форму і ми зв’яжемось одразу та вирішим ваші питання</h2>
+        <div class="modal_input">
+          <label for="name">Ім’я</label>
+          <input id="name" type="text" placeholder="Ваше ім’я">
+        </div>
+        <div class="modal_input">
+          <label for="phone">Контактні данні</label>
+          <input id="phone" type="text" placeholder="Введіть Ваш телефон">
+        </div>
+        <div class="modal_input">
+          <label for="question">Питання</label>
+          <textarea  id="question" placeholder="Введіть Ваше питання"></textarea>
+        </div>
+        <button class="btn btn-main">Відправити</button>
+      </form>
+    </div>
+  </div>
+  <main>
+    <header class="header">
+      <div class="header__top">
+          <div class="header__container">
+              <div class="header__top-inner">
+                  <div class="header__top-local">
+                      <span>Зроблено в Україні</span>
+                      <div class="header__local-img">
+                          <img src="images/icons/ukraine.svg" width="30" height="20" alt="Ukraine" loading="lazy">
+                      </div>
+                  </div>
+                  <ul class="header__top-contacts">
+                      <li class="header__contact-item">
+                          <a href="mailto:breadway@gmail.com" title="Написати листа Breadway">
+                              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                  <path d="M1.5 0.5C0.671875 0.5 0 1.17188 0 2C0 2.47187 0.221875 2.91562 0.6 3.2L7.4 8.3C7.75625 8.56563 8.24375 8.56563 8.6 8.3L15.4 3.2C15.7781 2.91562 16 2.47187 16 2C16 1.17188 15.3281 0.5 14.5 0.5H1.5ZM0 4V10.5C0 11.6031 0.896875 12.5 2 12.5H14C15.1031 12.5 16 11.6031 16 10.5V4L9.2 9.1C8.4875 9.63438 7.5125 9.63438 6.8 9.1L0 4Z" fill="#FB9500" />
+                                </svg>
+                                <span>breadway@gmail.com</span>
+                          </a>
+                      </li>
+                      <li class="header__contact-item">
+                          <a href="tel:+380955555555" title="Позвонити компанії Breadway">
+                              <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0__177__72)">
+                                    <path d="M5.15312 1.26848C4.9125 0.687228 4.27812 0.377853 3.67188 0.543478L0.921875 1.29348C0.378125 1.44348 0 1.93723 0 2.49973C0 10.231 6.26875 16.4997 14 16.4997C14.5625 16.4997 15.0563 16.1216 15.2063 15.5779L15.9563 12.8279C16.1219 12.2216 15.8125 11.5872 15.2312 11.3466L12.2312 10.0966C11.7219 9.8841 11.1313 10.031 10.7844 10.4591L9.52188 11.9997C7.32188 10.9591 5.54063 9.17785 4.5 6.97785L6.04063 5.71848C6.46875 5.36848 6.61562 4.78098 6.40312 4.2716L5.15312 1.2716V1.26848Z" fill="#FB9500" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0__177__72">
+                                      <rect width="16" height="16" fill="white" transform="translate(0 0.5)" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                <span>+38 (095) 555 55 55</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="header__bottom">
+          <div class="header__container">
+              <div class="header__bottom-inner">
+                  <button class="header__humburger" aria-label="mobile menu">
+                      <img src="images/icons/menu.svg" width="24" height="24" alt="mobile menu" loading="lazy">
+                  </button>
+                  <div class="header__logo">
+                      <a href="/" title="Компанія Breadway">
+                          <img src="images/icons/logo-breadway.png" width="300" height="40" alt="Компанія Breadway">
+                      </a>
+                  </div>
+                  <nav class="header__navigation">
+                      <ul class="header__navigation-list">
+                          <li><a href="about.html" class="main-link" title="Про нас">Про нас</a></li>
+                          <li class="link__submenu"><a href="#" class="main-link" title="Діяльність">
+                              <span>Діяльність</span>
+                              <svg class="link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                  <path d="M19.9201 8.94995L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.94995" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>                                    
+                          </a>
+                              <ul class="nav__submenu">
+                                  <li>
+                                      <a href="#" title="Рослинництво">
+                                      <span>Рослинництво</span>
+                                      <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                          <path d="M1 6.5C0.447715 6.5 4.82823e-08 6.94772 0 7.5C-4.82823e-08 8.05228 0.447715 8.5 1 8.5L1 6.5ZM26.7071 8.20711C27.0976 7.81658 27.0976 7.18342 26.7071 6.7929L20.3431 0.428934C19.9526 0.0384095 19.3195 0.0384094 18.9289 0.428934C18.5384 0.819458 18.5384 1.45262 18.9289 1.84315L24.5858 7.5L18.9289 13.1569C18.5384 13.5474 18.5384 14.1805 18.9289 14.5711C19.3195 14.9616 19.9526 14.9616 20.3431 14.5711L26.7071 8.20711ZM1 8.5L26 8.5L26 6.5L1 6.5L1 8.5Z"/>
+                                        </svg>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#" title="Переробка">
+                                      <span>Переробка</span>
+                                      <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                          <path d="M1 6.5C0.447715 6.5 4.82823e-08 6.94772 0 7.5C-4.82823e-08 8.05228 0.447715 8.5 1 8.5L1 6.5ZM26.7071 8.20711C27.0976 7.81658 27.0976 7.18342 26.7071 6.7929L20.3431 0.428934C19.9526 0.0384095 19.3195 0.0384094 18.9289 0.428934C18.5384 0.819458 18.5384 1.45262 18.9289 1.84315L24.5858 7.5L18.9289 13.1569C18.5384 13.5474 18.5384 14.1805 18.9289 14.5711C19.3195 14.9616 19.9526 14.9616 20.3431 14.5711L26.7071 8.20711ZM1 8.5L26 8.5L26 6.5L1 6.5L1 8.5Z"/>
+                                        </svg>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#" title="Трейдинг">
+                                      <span>Трейдинг</span>
+                                      <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                          <path d="M1 6.5C0.447715 6.5 4.82823e-08 6.94772 0 7.5C-4.82823e-08 8.05228 0.447715 8.5 1 8.5L1 6.5ZM26.7071 8.20711C27.0976 7.81658 27.0976 7.18342 26.7071 6.7929L20.3431 0.428934C19.9526 0.0384095 19.3195 0.0384094 18.9289 0.428934C18.5384 0.819458 18.5384 1.45262 18.9289 1.84315L24.5858 7.5L18.9289 13.1569C18.5384 13.5474 18.5384 14.1805 18.9289 14.5711C19.3195 14.9616 19.9526 14.9616 20.3431 14.5711L26.7071 8.20711ZM1 8.5L26 8.5L26 6.5L1 6.5L1 8.5Z"/>
+                                        </svg>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#" title="Експорт">
+                                      <span>Експорт</span>
+                                      <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                          <path d="M1 6.5C0.447715 6.5 4.82823e-08 6.94772 0 7.5C-4.82823e-08 8.05228 0.447715 8.5 1 8.5L1 6.5ZM26.7071 8.20711C27.0976 7.81658 27.0976 7.18342 26.7071 6.7929L20.3431 0.428934C19.9526 0.0384095 19.3195 0.0384094 18.9289 0.428934C18.5384 0.819458 18.5384 1.45262 18.9289 1.84315L24.5858 7.5L18.9289 13.1569C18.5384 13.5474 18.5384 14.1805 18.9289 14.5711C19.3195 14.9616 19.9526 14.9616 20.3431 14.5711L26.7071 8.20711ZM1 8.5L26 8.5L26 6.5L1 6.5L1 8.5Z"/>
+                                        </svg>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#" class="main-link" title="Сталий розвиток">Сталий розвиток</a></li>
+                          <li><a href="#" class="main-link" title="Медіа центр">Медіа центр</a></li>
+                          <li><a href="contact.html" class="main-link" title="Контакти">Контакти</a></li>
+                      </ul>
+                  </nav>
+                  <div class="header__active">
+                      <div class="header__select-lang">
+                          <button class="select__lang-selected">
+                              <span>UA</span>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                  <path d="M19.9201 8.94995L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.94995" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                          </button>
+                          <ul class="select-lang__list">
+                              <li><a href="/" hreflang="en" title="English">EN</a></li>
+                              <li><a href="/" hreflang="pl" title="Polish">POL</a></li>
+                          </ul>
+                      </div>
+                      <button class="btn btn-main btn-header" title="Зворотній зв'язок" aria-label="Зворотній зв'язок">
+                          <span>Зворотній зв'язок</span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z"/>
+                              <path d="M21.9696 18.3291C21.9696 18.6091 21.9196 18.8991 21.8196 19.1791C21.7896 19.2591 21.7596 19.3391 21.7196 19.4191C21.5496 19.7791 21.3296 20.1191 21.0396 20.4391C20.5496 20.9791 20.0096 21.3691 19.3996 21.6191C19.3896 21.6191 19.3796 21.6291 19.3696 21.6291C18.7796 21.8691 18.1396 21.9991 17.4496 21.9991C16.4296 21.9991 15.3396 21.7591 14.1896 21.2691C13.0396 20.7791 11.8896 20.1191 10.7496 19.2891C10.3596 18.9991 9.96961 18.7091 9.59961 18.3991L12.8696 15.1291C13.1496 15.3391 13.3996 15.4991 13.6096 15.6091C13.6596 15.6291 13.7196 15.6591 13.7896 15.6891C13.8696 15.7191 13.9496 15.7291 14.0396 15.7291C14.2096 15.7291 14.3396 15.6691 14.4496 15.5591L15.2096 14.8091C15.4596 14.5591 15.6996 14.3691 15.9296 14.2491C16.1596 14.1091 16.3896 14.0391 16.6396 14.0391C16.8296 14.0391 17.0296 14.0791 17.2496 14.1691C17.4696 14.2591 17.6996 14.3891 17.9496 14.5591L21.2596 16.9091C21.5196 17.0891 21.6996 17.2991 21.8096 17.5491C21.9096 17.7991 21.9696 18.0491 21.9696 18.3291Z"/>
+                          </svg>                                
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="mobile__menu">
+          <div class="mobile__menu-inner">
+              <div class="mobile__menu-head">
+                  <a href="/" class="head__menu-logo">
+                      <img src="images/icons/logo-breadway.svg" width="300" height="40" alt="Компанія Breadway">
+                  </a>
+                  <div class="head__menu-close">
+                      <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+              </div>
+              <div class="mobile__menu-content">
+                  <div class="menu__content-title">Навігація</div>
+                  <nav class="mobile__navigation">
+                      <ul>
+                          <li><a href="about.html" class="mobile-link" title="Про нас">Про нас</a></li>
+                          <li><a href="#" class="mobile-link" title="Діяльність">Діяльність</a>
+                              <ul class="mobile__sub">
+                                  <li>
+                                      <a href="#" title="Рослинництво">Рослинництво</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" title="Переробка">Переробка</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" title="Трейдинг">Трейдинг</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" title="Експорт">Експорт</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#" class="mobile-link" title="Сталий розвиток">Сталий розвиток</a></li>
+                          <li><a href="#" class="mobile-link" title="Медіа центр">Медіа центр</a></li>
+                          <li><a href="contact.html" class="mobile-link" title="Контакти">Контакти</a></li>
+                      </ul>
+                  </nav>
+                  <div class="menu__content-title">Контакти</div>
+                  <div class="mobile__contact">
+                      <ul>
+                          <li>
+                              <a href="mailto:breadway@gmail.com" title="Написати листа Breadway">
+                                  <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                      <path d="M1.5 0.5C0.671875 0.5 0 1.17188 0 2C0 2.47187 0.221875 2.91562 0.6 3.2L7.4 8.3C7.75625 8.56563 8.24375 8.56563 8.6 8.3L15.4 3.2C15.7781 2.91562 16 2.47187 16 2C16 1.17188 15.3281 0.5 14.5 0.5H1.5ZM0 4V10.5C0 11.6031 0.896875 12.5 2 12.5H14C15.1031 12.5 16 11.6031 16 10.5V4L9.2 9.1C8.4875 9.63438 7.5125 9.63438 6.8 9.1L0 4Z" fill="#FB9500" />
+                                    </svg>
+                                    <span>breadway@gmail.com</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="tel:+380955555555" title="Позвонити компанії Breadway">
+                                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                      <g clip-path="url(#clip0__177__72)">
+                                        <path d="M5.15312 1.26848C4.9125 0.687228 4.27812 0.377853 3.67188 0.543478L0.921875 1.29348C0.378125 1.44348 0 1.93723 0 2.49973C0 10.231 6.26875 16.4997 14 16.4997C14.5625 16.4997 15.0563 16.1216 15.2063 15.5779L15.9563 12.8279C16.1219 12.2216 15.8125 11.5872 15.2312 11.3466L12.2312 10.0966C11.7219 9.8841 11.1313 10.031 10.7844 10.4591L9.52188 11.9997C7.32188 10.9591 5.54063 9.17785 4.5 6.97785L6.04063 5.71848C6.46875 5.36848 6.61562 4.78098 6.40312 4.2716L5.15312 1.2716V1.26848Z" fill="#FB9500" />
+                                      </g>
+                                      <defs>
+                                        <clipPath id="clip0__177__72">
+                                          <rect width="16" height="16" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                      </defs>
+                                    </svg>
+                                    <span>+38 (095) 555 55 55</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+
+              </div>
+              <div class="mobile__menu-action">
+                  <div class="menu__action-langs">
+                      <ul>
+                          <li><a href="/" class="current-lang" hreflang="ua" title="Українська">UA</a></li>
+                          <li><a href="/" hreflang="en" title="English">EN</a></li>
+                      </ul>
+                  </div>
+                  <button class="btn btn-main" title="Зворотній зв'язок" aria-label="Зворотній зв'язок">Зворотній зв'язок</button>
+              </div>
+          </div>
+      </div>
+  </header>
+  
+  <section class="contact_page">
+    <div class="container">
+        <div class="contact_page-left">
+            <div class="contact__left-title">
+                <span class="defaultSpan">Контакти</span>
+                <h1>Як <strong>знайти</strong> нас</h1>
+                <p>Компанія BREADWAY , яка працює у сфері агробізнесу, взяла на себе відповідальність та забезпечує керовану та високоякісну діяльність в усіх аспектах.</p>
+            </div>
+            <div class="contact__left-list">
+                <h2>Контактні данні</h2>
+                <ul>
+                    <li>
+                        <a href="mailto:breadway@gmail.com" title="Написати листа Breadway">
+                            <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M1.5 0.5C0.671875 0.5 0 1.17188 0 2C0 2.47187 0.221875 2.91562 0.6 3.2L7.4 8.3C7.75625 8.56563 8.24375 8.56563 8.6 8.3L15.4 3.2C15.7781 2.91562 16 2.47187 16 2C16 1.17188 15.3281 0.5 14.5 0.5H1.5ZM0 4V10.5C0 11.6031 0.896875 12.5 2 12.5H14C15.1031 12.5 16 11.6031 16 10.5V4L9.2 9.1C8.4875 9.63438 7.5125 9.63438 6.8 9.1L0 4Z" fill="#FB9500"></path>
+                              </svg>
+                              <span>breadway@gmail.com</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="tel:+380955555555" title="Позвонити компанії Breadway">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0__177__72)">
+                                  <path d="M5.15312 1.26848C4.9125 0.687228 4.27812 0.377853 3.67188 0.543478L0.921875 1.29348C0.378125 1.44348 0 1.93723 0 2.49973C0 10.231 6.26875 16.4997 14 16.4997C14.5625 16.4997 15.0563 16.1216 15.2063 15.5779L15.9563 12.8279C16.1219 12.2216 15.8125 11.5872 15.2312 11.3466L12.2312 10.0966C11.7219 9.8841 11.1313 10.031 10.7844 10.4591L9.52188 11.9997C7.32188 10.9591 5.54063 9.17785 4.5 6.97785L6.04063 5.71848C6.46875 5.36848 6.61562 4.78098 6.40312 4.2716L5.15312 1.2716V1.26848Z" fill="#FB9500"></path>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0__177__72">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"></rect>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                              <span>+38 (095) 555 55 55</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:breadway@gmail.com" title="Написати листа Breadway">
+                            <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M1.5 0.5C0.671875 0.5 0 1.17188 0 2C0 2.47187 0.221875 2.91562 0.6 3.2L7.4 8.3C7.75625 8.56563 8.24375 8.56563 8.6 8.3L15.4 3.2C15.7781 2.91562 16 2.47187 16 2C16 1.17188 15.3281 0.5 14.5 0.5H1.5ZM0 4V10.5C0 11.6031 0.896875 12.5 2 12.5H14C15.1031 12.5 16 11.6031 16 10.5V4L9.2 9.1C8.4875 9.63438 7.5125 9.63438 6.8 9.1L0 4Z" fill="#FB9500"></path>
+                              </svg>
+                              <span>breadway@gmail.com</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="tel:+380955555555" title="Позвонити компанії Breadway">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0__177__72)">
+                                  <path d="M5.15312 1.26848C4.9125 0.687228 4.27812 0.377853 3.67188 0.543478L0.921875 1.29348C0.378125 1.44348 0 1.93723 0 2.49973C0 10.231 6.26875 16.4997 14 16.4997C14.5625 16.4997 15.0563 16.1216 15.2063 15.5779L15.9563 12.8279C16.1219 12.2216 15.8125 11.5872 15.2312 11.3466L12.2312 10.0966C11.7219 9.8841 11.1313 10.031 10.7844 10.4591L9.52188 11.9997C7.32188 10.9591 5.54063 9.17785 4.5 6.97785L6.04063 5.71848C6.46875 5.36848 6.61562 4.78098 6.40312 4.2716L5.15312 1.2716V1.26848Z" fill="#FB9500"></path>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0__177__72">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"></rect>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                              <span>+38 (095) 555 55 55</span>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+            <hr>
+            <div class="contact__left-social">
+                <h2>Ми в соц.мережах</h2>
+                <ul>
+                    <li>
+                        <a href="#" title="instagram">
+                            <img src="images/icons/instagram.svg" alt="instagram" loading="lazy" width="25px" height="25px">
+                            <span>breadway</span>
+                        </a>
+                     
+                    </li>
+                    <li>
+                        <a href="#" title="facebook">
+                            <img src="images/icons/facebook.svg" alt="facebook" loading="lazy" width="25px" height="25px">
+                            <span>breadway.com</span>
+                        </a>
+                       
+                    </li>
+                    <li>
+                        <a href="#" title="twitter">
+                            <img src="images/icons/twitter.svg" alt="twitter" loading="lazy" width="25px" height="25px">
+                            <span>breadway.com</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact_page-right">
+            <div class="contact__top">
+                <img src="images/banners/banner1.png" alt="banner" class="banner">
+                <img src="images/banners/Labelwhite.png" alt="label" class="logo">
+            </div>
+            <form action="">
+                <h3>Заповніть форму і ми зв’яжемось одразу та вирішим ваші питання</h3>
+                <div class="contact__bottom_input">
+                    <input type="text" placeholder="Ваше Ім’я">
+                    <input type="text" placeholder="Телефон чи email">
+                </div>
+                <textarea placeholder="Ваше повідомлення"></textarea>
+                <button class="btn btn-main">Відправити</button>
+            </form>
+        </div>
+    </div>
+  </section>
+  <section class="location">
+    <div class="container">
+      <div class="location_title">
+        <span class="defaultSpan">Локація</span>
+        <h2>Місце розташування компанії <strong>BREADWAY</strong></h2>
+      </div>
+      <div class="location_map">
+        <img src="images/banners/location.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="why">
+    <div class="container">
+      <div class="why_title">
+        <img src="images/banners/LabelWheat.png" alt="logoLeft" class="logoLeft">
+        <img src="images/banners/LabelWheat.png" alt="logoRight" class="logoRight">
+        <span class="defaultSpan">Чому ми?</span>
+        <h2>Навіщо вибрати компанію <strong>BREADWAY</strong></h2>
+      </div>
+      <div class="why_content">
+        <div class="why_content-left">
+          <h3>Lorem</h3>
+          <p>Крім внутрішнього ринку, компанія активно працює у напрямку експорту та імпорту зернових культур. <strong>BREADWAY</strong>  займається трейдингом зернових культур та іншої агропродукції, співпрацюючи як з внутрішніми виробниками, так і з іноземними партнерами. </p>
+          <p>У рамках трейдингу компанія веде переговори з постачальниками та покупцями, укладає контракти на постачання та відвантаження продукції, контролює якість та кількість товару. Крім того, компанія активно вивчає світові ринки та аналізує попит на агропродукцію, що дозволяє їй приймати обґрунтовані рішення щодо закупівлі та продажу продукції.</p>
+        </div>
+        <div class="why_content-right">
+          <ul>
+            <li class="faq_item">
+                <div class="faq_item_question">
+                    <span>Питання про компанію бредвей? </span>
+                    <img width="20" height="20" src="images/icons/arrow-right-black.svg" alt="Arrow" class="active">
+                </div>
+                <p class="active">Крім внутрішнього ринку, компанія активно працює у напрямку експорту та імпорту зернових культур. <strong>BREADWAY</strong>  займається трейдингом зернових культур та іншої агропродукції, співпрацюючи як з внутрішніми виробниками, так і з іноземними партнерами. </p>
+            </li>
+            <li class="faq_item">
+              <div class="faq_item_question">
+                  <span>Питання про компанію бредвей? </span>
+                  <img width="20" height="20" src="images/icons/arrow-right-black.svg" alt="Arrow" >
+              </div>
+              <p >Крім внутрішнього ринку, компанія активно працює у напрямку експорту та імпорту зернових культур. <strong>BREADWAY</strong>  займається трейдингом зернових культур та іншої агропродукції, співпрацюючи як з внутрішніми виробниками, так і з іноземними партнерами. </p>
+          </li>
+          <li class="faq_item">
+            <div class="faq_item_question">
+                <span>Питання про компанію бредвей? </span>
+                <img width="20" height="20" src="images/icons/arrow-right-black.svg" alt="Arrow" >
+            </div>
+            <p >Крім внутрішнього ринку, компанія активно працює у напрямку експорту та імпорту зернових культур. <strong>BREADWAY</strong>  займається трейдингом зернових культур та іншої агропродукції, співпрацюючи як з внутрішніми виробниками, так і з іноземними партнерами. </p>
+        </li>
+        <li class="faq_item">
+          <div class="faq_item_question">
+              <span>Питання про компанію бредвей? </span>
+              <img width="20" height="20" src="images/icons/arrow-right-black.svg" alt="Arrow" >
+          </div>
+          <p>Крім внутрішнього ринку, компанія активно працює у напрямку експорту та імпорту зернових культур. <strong>BREADWAY</strong>  займається трейдингом зернових культур та іншої агропродукції, співпрацюючи як з внутрішніми виробниками, так і з іноземними партнерами. </p>
+      </li>
+            
+        </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="container">
+      <div class="contact__wrapper">
+        <img src="images/banners/wheat_1.png" alt="wheat" class="wheat_left" width="70px" height="300px" loading="lazy">
+        <img src="images/banners/wheat_1.png" alt="wheat" class="wheat_right" width="70px" height="300px" loading="lazy">
+        <div class="contact__left">
+          <span class="defaultSpan">Зв’язатись з нами</span>
+          <h2>Зв’яжемось якумога швидше</h2>
+        </div>
+        <div class="contact__right">
+          <form action="">
+            <h3>Заповніть форму і ми зв’яжемось одразу та вирішим ваші питання</h3>
+            <div class="contact__form-block">
+              <input type="text" placeholder="Ваше ім’я">
+              <input type="text" placeholder="Телефон чи email">
+            </div>
+            <textarea placeholder="Ваше повідомлення"></textarea>
+            <button class="btn" aria-label="Відправити">Відправити</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer> 
+    <div class="footer_top">
+     <div class="container">
+     <div class="footer_item-logo">
+       <img src="images/banners/footerlogo.png" alt="footerLogo" width="250px" height="49px" loading="lazy">
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+       <div class="footer_item-social">
+         <a href="#" title="instagram">
+           <img src="images/icons/instagram.svg" alt="instagram" loading="lazy" width="25px" height="25px">
+         </a>
+         <a href="#" title="facebook">
+           <img src="images/icons/facebook.svg" alt="facebook" loading="lazy" width="25px" height="25px">
+         </a>
+         <a href="#" title="twitter">
+           <img src="images/icons/twitter.svg" alt="twitter" loading="lazy" width="25px" height="25px">
+         </a>
+         <a href="#" title="youtube">
+           <img src="images/icons/youtube.svg" alt="youtube" loading="lazy" width="25px" height="25px">
+         </a>
+       </div>
+     </div>
+     <div class="footer_items">
+       <div class="footer_item">
+         <span class="footer_item-title">Компанія</span>
+         <ul class="footer_item-list">
+           <li>
+             <a href="#" title="Про нас">Про нас</a>
+           </li>
+           <li>
+             <a href="#" title="Діяльність">Діяльність</a>
+           </li>
+           <li>
+             <a href="#" title="Сталий розвиток">Сталий розвиток</a>
+           </li>
+           <li>
+             <a href="#" title="Медіа центр">Медіа центр</a>
+           </li>
+           <li>
+             <a href="#" title="Контакти">Контакти</a>
+           </li>
+         </ul>
+       </div>
+       <div class="footer_item">
+         <span class="footer_item-title">Діяльність</span>
+         <ul class="footer_item-list">
+           <li>
+             <a href="#" title="Рослинництво">Рослинництво</a>
+           </li>
+           <li>
+             <a href="#" title="Переробка">Переробка</a>
+           </li>
+           <li>
+             <a href="#" title="Трейдинг">Трейдинг</a>
+           </li>
+           <li>
+             <a href="#" title="Експорт">Експорт</a>
+           </li>
+         </ul>
+       </div>
+       <div class="footer_item">
+         <span class="footer_item-title">Контакти</span>
+         <ul class="footer_item-list">
+           <li>
+             <a href="tel:+380955555555" title="Позвонити компанії Breadway">
+               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="https://www.w3.org/2000/svg">
+                   <g clip-path="url(#clip0__177__72)">
+                     <path d="M5.15312 1.26848C4.9125 0.687228 4.27812 0.377853 3.67188 0.543478L0.921875 1.29348C0.378125 1.44348 0 1.93723 0 2.49973C0 10.231 6.26875 16.4997 14 16.4997C14.5625 16.4997 15.0563 16.1216 15.2063 15.5779L15.9563 12.8279C16.1219 12.2216 15.8125 11.5872 15.2312 11.3466L12.2312 10.0966C11.7219 9.8841 11.1313 10.031 10.7844 10.4591L9.52188 11.9997C7.32188 10.9591 5.54063 9.17785 4.5 6.97785L6.04063 5.71848C6.46875 5.36848 6.61562 4.78098 6.40312 4.2716L5.15312 1.2716V1.26848Z" fill="#FB9500" />
+                   </g>
+                   <defs>
+                     <clipPath id="clip0__177__72">
+                       <rect width="16" height="16" fill="white" transform="translate(0 0.5)" />
+                     </clipPath>
+                   </defs>
+                 </svg>
+               <span>+38 (095) 555 55 55</span>
+             </a>
+           </li>
+           <li>
+             <a href="mailto:breadway@gmail.com" title="Написати листа Breadway">
+               <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="https://www.w3.org/2000/svg">
+                 <path d="M1.5 0.5C0.671875 0.5 0 1.17188 0 2C0 2.47187 0.221875 2.91562 0.6 3.2L7.4 8.3C7.75625 8.56563 8.24375 8.56563 8.6 8.3L15.4 3.2C15.7781 2.91562 16 2.47187 16 2C16 1.17188 15.3281 0.5 14.5 0.5H1.5ZM0 4V10.5C0 11.6031 0.896875 12.5 2 12.5H14C15.1031 12.5 16 11.6031 16 10.5V4L9.2 9.1C8.4875 9.63438 7.5125 9.63438 6.8 9.1L0 4Z" fill="#FB9500" />
+               </svg>
+               <span>breadway@gmail.com</span>
+             </a>
+           </li>
+         </ul>
+         <button class="btn btn-main" aria-label="Зв’язатись з нами">Зв’язатись з нами</button>
+       </div>
+       <div class="footer_item">
+         <span class="footer_item-title">Адреса</span>
+         <ul class="footer_item-list">
+           <li>
+            <p>обл. Київська, м. Київ, вул. Печерська 34</p>
+           </li>
+         </ul>
+       </div>
+     </div>
+   
+   </div>
+ </div>
+ <div class="footer_bottom">
+  <span>All rights reserved</span>
+  <span>Copyright © 2024. BREADWAY</span>
+  <span>AGRO MARKETING AGENCY</span>
+ </div>
+ </footer>
+  </main>
+ 
+  </body>
+  <script src="index.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</html>

@@ -24,6 +24,30 @@
   <!-- prettier-ignore -->
   <body>
   <div id="overlay"></div>
+  <div class="modal">
+    <div class="modalContent">
+      <img src="images/icons/close.svg" alt="modal close button" class="modalContent-close" width="32px" height="32px">
+      <div class="modalContent-left">
+        <img src="images/banners/modal.png" alt="">
+      </div>
+      <form action="">
+        <h2>Заповніть форму і ми зв’яжемось одразу та вирішим ваші питання</h2>
+        <div class="modal_input">
+          <label for="name">Ім’я</label>
+          <input id="name" type="text" placeholder="Ваше ім’я">
+        </div>
+        <div class="modal_input">
+          <label for="phone">Контактні данні</label>
+          <input id="phone" type="text" placeholder="Введіть Ваш телефон">
+        </div>
+        <div class="modal_input">
+          <label for="question">Питання</label>
+          <textarea  id="question" placeholder="Введіть Ваше питання"></textarea>
+        </div>
+        <button class="btn btn-main">Відправити</button>
+      </form>
+    </div>
+  </div>
   <main>
     <header class="header">
       <div class="header__top">
@@ -76,7 +100,7 @@
                   </div>
                   <nav class="header__navigation">
                       <ul class="header__navigation-list">
-                          <li><a href="#" class="main-link" title="Про нас">Про нас</a></li>
+                          <li><a href="about.html" class="main-link" title="Про нас">Про нас</a></li>
                           <li class="link__submenu"><a href="#" class="main-link" title="Діяльність">
                               <span>Діяльність</span>
                               <svg class="link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
@@ -120,7 +144,7 @@
                           </li>
                           <li><a href="#" class="main-link" title="Сталий розвиток">Сталий розвиток</a></li>
                           <li><a href="#" class="main-link" title="Медіа центр">Медіа центр</a></li>
-                          <li><a href="#" class="main-link" title="Контакти">Контакти</a></li>
+                          <li><a href="contact.html" class="main-link" title="Контакти">Контакти</a></li>
                       </ul>
                   </nav>
                   <div class="header__active">
@@ -163,7 +187,7 @@
                   <div class="menu__content-title">Навігація</div>
                   <nav class="mobile__navigation">
                       <ul>
-                          <li><a href="#" class="mobile-link" title="Про нас">Про нас</a></li>
+                          <li><a href="about.html" class="mobile-link" title="Про нас">Про нас</a></li>
                           <li><a href="#" class="mobile-link" title="Діяльність">Діяльність</a>
                               <ul class="mobile__sub">
                                   <li>
@@ -182,7 +206,7 @@
                           </li>
                           <li><a href="#" class="mobile-link" title="Сталий розвиток">Сталий розвиток</a></li>
                           <li><a href="#" class="mobile-link" title="Медіа центр">Медіа центр</a></li>
-                          <li><a href="#" class="mobile-link" title="Контакти">Контакти</a></li>
+                          <li><a href="contact.html" class="mobile-link" title="Контакти">Контакти</a></li>
                       </ul>
                   </nav>
                   <div class="menu__content-title">Контакти</div>
@@ -502,7 +526,7 @@
     <section class="сontact_block">
      <div class="container">
       <div class="contact_block-left">
-        <span>Зв’язатись с нами</span>
+        <span class="defaultSpan">Зв’язатись с нами</span>
         <h2>Lorem Ipsum <strong>начал как</strong> омлет, бессмысленные</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
@@ -520,7 +544,7 @@
     <section class="our_clients">
       <div class="container">
         <div class="our_clients-title">
-          <span>Наші клієнти</span>
+          <span class="defaultSpan">Наші клієнти</span>
           <h2><strong>Ми пишаємось</strong> що працюємо з цими гігантами</h2>
         </div>
         <div class="swiper swiper3">
@@ -668,7 +692,7 @@
           <img src="images/banners/wheat_1.png" alt="wheat" class="wheat_left" width="70px" height="300px" loading="lazy">
           <img src="images/banners/wheat_1.png" alt="wheat" class="wheat_right" width="70px" height="300px" loading="lazy">
           <div class="contact__left">
-            <span>Зв’язатись з нами</span>
+            <span class="defaultSpan">Зв’язатись з нами</span>
             <h2>Зв’яжемось якумога швидше</h2>
           </div>
           <div class="contact__right">
