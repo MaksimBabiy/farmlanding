@@ -37,17 +37,6 @@
   --font-size-h3: 30px;
 }
 
-html,
-body {
-  color: var(--black-color);
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: auto;
-}
-
 #overlay {
   position: fixed;
   display: none;
@@ -1476,6 +1465,7 @@ section.activity
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  position: relative;
   background-color: #dfdfdf;
   z-index: 1;
 }
@@ -1484,12 +1474,22 @@ section.activity
   .activity_content
   .activity_content-left
   .activity__left-line
-  span.active {
+  span.active::after {
+  content: url("images/icons/features.svg");
   width: 42px;
-  background-image: url("images/icons/features.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   height: 42px;
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-radius: 50%;
   background-color: var(--main-color);
 }

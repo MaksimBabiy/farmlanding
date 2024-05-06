@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.querySelector("#overlay");
   const modalClose = document.querySelector(".modalContent-close");
   const faq_item = document.querySelectorAll(".faq_item");
+
   for (let item of faq_item) {
     item.addEventListener("click", function () {
       item.children[0].children[1].classList.toggle("active");
@@ -207,22 +208,22 @@ let options = {
 };
 let items = document.querySelectorAll(".activity__right-item");
 let spans = document.querySelectorAll(".activity__line-span");
-const intersection = (target) => {
-  let callback = function (entries, observer) {
-    entries.forEach((entry) => {
-      if (entry.isVisible) {
-        spans.forEach((item) => {
-          item.classList.remove("active");
-          item.dataset.activity === entry.target.dataset.activity
-            ? item.classList.add("active")
-            : null;
-        });
-      }
-    });
-  };
-  var observer = new IntersectionObserver(callback, options);
-  observer.observe(target);
-};
-items.forEach((item) => {
-  intersection(item);
+
+document.addEventListener("scroll", function () {
+  let currentSection = "";
+
+  items.forEach(function (section) {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop - window.innerHeight / 2) {
+      currentSection = section.dataset.activity;
+    }
+  });
+
+  spans.forEach((item) => {
+    item.classList.remove("active");
+    if (item.dataset.activity === currentSection) {
+      item.classList.add("active");
+    }
+  });
 });
