@@ -20,10 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
   modalBtn.addEventListener("click", function () {
     modal.classList.add("active");
     overlay.classList.add("active");
+    document.body.classList.add("active");
   });
   modalClose.addEventListener("click", function () {
     modal.classList.remove("active");
     overlay.classList.remove("active");
+    document.body.classList.remove("active");
   });
 
   if (btnHumburger && mobileMenu && btnCloseMobile) {
